@@ -1,0 +1,45 @@
+@import "../../_globalColor.scss";
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.splash-animation-container {
+  width: 300px;
+  max-width: 80vw;
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* If the lottie SVG overflows */
+.splash-animation-container svg {
+  width: 100%;
+  height: auto;
+}
+
+.splash-title-container {
+  font-size: 2.5rem;
+  text-decoration: none;
+}
+
+.splash-title {
+  font-family: "Parisienne", cursive;
+  font-weight: 500;
+  font-size: 60px;
+  font-style: normal;
+  padding: 0 20px;
+
+  color: $buttonColorLight;
+}
+
+/* Dark mode: force white */
+.dark-mode .splash-title {
+  color: #ffffff;
+}

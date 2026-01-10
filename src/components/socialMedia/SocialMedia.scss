@@ -1,0 +1,55 @@
+@import "../../_globalColor";
+
+.social-media-div {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.icon-button.btn-like {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+
+  text-decoration: none;
+  color: #fff;
+
+  background: #5b2aa6; /* match CTA */
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.icon-button.btn-like:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+.icon-button.btn-like i {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.btn-text {
+  color: #fff;
+}
+
+/* brand-specific button colors */
+.icon-button.btn-like.linkedin {
+  background-color: $linkedin;
+}
+
+.icon-button.btn-like.github {
+  background-color: $github;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .social-media-div {
+    justify-content: center;
+  }
+}

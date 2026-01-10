@@ -1,0 +1,202 @@
+@import "../../_globalColor";
+
+.greet-main {
+  --btn-bg: #{$buttonColorLight};
+  --btn-hover: #{$buttonHoverLight};
+}
+
+.greet-main.dark-mode {
+  --btn-bg: #{$buttonColorDark};
+  --btn-hover: #{$buttonHoverDark};
+}
+
+.main {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.greet-main {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.greeting-main {
+  display: flex;
+}
+
+.subTitle {
+  color: $subTitle !important;
+}
+
+.greeting-main > * {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.empty-div {
+  margin-bottom: 40px;
+}
+
+/* ================= CTA GRID ================= */
+
+.cta-grid {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 18px;
+  max-width: 520px;
+  margin-top: 40px;
+}
+
+.cta-grid .social-media-div,
+.cta-grid .button-greeting-div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 0;
+}
+
+.cta-grid * {
+  box-sizing: border-box;
+}
+
+.cta-grid .social-media-div a,
+.cta-grid .button-greeting-div a {
+  position: static !important;
+  float: none !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 56px;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+/* ================= ONLY CONTACT + RESUME BUTTONS ================= */
+/* Very specific selectors to override existing purple rules */
+.cta-grid .button-greeting-div a.icon-button.btn-like {
+  background-color: var(--btn-bg) !important;
+  border: 1px solid var(--btn-bg) !important;
+  color: #ffffff !important;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cta-grid .button-greeting-div a.icon-button.btn-like:hover {
+  background-color: var(--btn-hover) !important;
+  border-color: var(--btn-hover) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* ================= TEXT / IMAGE ================= */
+
+.greeting-text {
+  font-size: 70px;
+  line-height: 1.1;
+  color: #000;
+}
+
+.dark-mode.greeting-text {
+  color: #ffffff !important;
+}
+
+.greeting-text-p {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.dark-mode.greeting-text-p {
+  color: $subTitle;
+}
+
+.greeting-image-div > img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Wave emoji */
+.wave-emoji {
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-name: wave;
+  display: inline-block;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(-10deg); }
+  20% { transform: rotate(12deg); }
+  30% { transform: rotate(-10deg); }
+  40% { transform: rotate(9deg); }
+  50% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.greeting-image-div {
+  display: flex;
+  align-items: center;      /* vertical align */
+  justify-content: center;  /* horizontal align */
+}
+
+/* This targets the wrapper created by DisplayLottie */
+.greeting-image-div > div {
+  width: 600px; // 800
+  max-width: 100%;
+  height: auto;
+  transform: scale(1.4);
+}
+
+/* Ensure the svg scales with the wrapper */
+.greeting-image-div svg {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1380px) {
+  .greeting-text {
+    font-size: 50px;
+  }
+  .greeting-text-p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-grid .social-media-div,
+  .cta-grid .button-greeting-div {
+    grid-template-columns: 1fr;
+  }
+
+  .greeting-text {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .greeting-text-p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .greeting-main {
+    display: block;
+  }
+
+  .greeting-image-div {
+    height: 256px;
+  }
+}
+
+@media (max-width: 320px) {
+  .main {
+    width: auto;
+  }
+}

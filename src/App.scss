@@ -1,0 +1,32 @@
+@import "./_globalColor";
+
+.App {
+  text-align: left; // align text
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--page-bg);
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: $appHeaderBG;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(0.625rem + 2vmin);
+  color: $textColorDark;
+}
+
+.App-link {
+  color: $appLink;
+}
+
+.subTitle {
+  color: $subTitle;
+}
