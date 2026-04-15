@@ -114,7 +114,7 @@ const educationInfo = {
       schoolName: "San Francisco State University",
       logo: require("./assets/images/SFSULogo.png"),
       subHeader: "Bachelor of Science in Computer Science",
-      duration: "August 2024 - December 2026",
+      duration: "August 2024 - August 2026",
       desc: "Advanced computer science studies with an emphasis on software development, systems programming, and applied computing.",
       descBullets: [
         "Completed coursework in software development, data structures, systems, and web development",
@@ -168,7 +168,7 @@ const workExperiences = {
       role: "Fellowship Intern",
       company: "Handshake AI",
       companylogo: require("./assets/images/HandshakeLogo.jpg"),
-      date: "December 2025 – Present",
+      date: "December 2025 – February 2026",
       descBullets: [
         "Evaluated and improved large language model outputs using structured human feedback and quality rubrics.",
         "Identified reasoning errors, hallucinations, and edge cases to support iterative model improvement."
@@ -219,9 +219,20 @@ const bigProjects = {
           url: "https://github.com/Abhay-Bajaj/PlanCraft"
         }
       ]
+    },
+    {
+      // image: require("./assets/images/"),
+      projectName: "Finance Tracker",
+      projectDesc: "A full-stack personal finance tracking application",
+      footerLink: [
+        {
+          name: "View Project",
+          url: "https://github.com/Abhay-Bajaj/FinanceTracker"
+        }
+      ]
     }
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: true // Set false to hide this section, defaults to true
 };
 
 // Achievement Section
