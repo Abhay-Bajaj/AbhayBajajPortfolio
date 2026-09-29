@@ -1,7 +1,7 @@
-import React, {useState, useEffect, useContext, Suspense, lazy} from "react";
+import React, { useState, useEffect, useContext, Suspense, lazy } from "react";
 import "./Project.scss";
-import Button from "../../components/button/Button";
-import {openSource, socialMediaLinks} from "../../portfolio";
+// import Button from "../../components/button/Button";
+import { openSource } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 import Loading from "../../containers/loading/Loading";
 export default function Projects() {
@@ -12,11 +12,11 @@ export default function Projects() {
   const renderLoader = () => <Loading />;
   const [repo, setrepo] = useState([]);
   // todo: remove useContex because is not supported
-  const {isDark} = useContext(StyleContext);
+  const { isDark } = useContext(StyleContext);
 
   useEffect(() => {
     const getRepoData = () => {
-      fetch("/profile.json")
+      fetch(`${process.env.PUBLIC_URL}/profile.json`)
         .then(result => {
           if (result.ok) {
             return result.json();
@@ -24,7 +24,8 @@ export default function Projects() {
           throw result;
         })
         .then(response => {
-          setrepoFunction(response.data.user.pinnedItems.edges);
+          const edges = response.data?.user?.pinnedItems?.edges ?? [];
+          setrepoFunction(edges.filter(edge => edge?.node?.id));
         })
         .catch(function (error) {
           console.error(
@@ -46,7 +47,7 @@ export default function Projects() {
     return (
       <Suspense fallback={renderLoader()}>
         <div className="main" id="opensource">
-          <h1 className="project-title">Open Source Projects</h1>
+          <h1 className="project-title">Personal Projects</h1>
           <div className="repo-cards-div-main">
             {repo.map((v, i) => {
               if (!v) {
@@ -59,12 +60,12 @@ export default function Projects() {
               );
             })}
           </div>
-          <Button
+          {/* <Button
             text={"More Projects"}
             className="project-button"
             href={socialMediaLinks.github}
             newTab={true}
-          />
+          /> */}
         </div>
       </Suspense>
     );

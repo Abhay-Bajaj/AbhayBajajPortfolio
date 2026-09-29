@@ -1,5 +1,5 @@
-import React, {useState, useEffect, lazy, Suspense} from "react";
-import {openSource} from "../../portfolio";
+import React, { useState, useEffect, lazy, Suspense } from "react";
+import { openSource } from "../../portfolio";
 import Contact from "../contact/Contact";
 import Loading from "../loading/Loading";
 
@@ -16,7 +16,7 @@ export default function Profile() {
   useEffect(() => {
     if (openSource.showGithubProfile === "true") {
       const getProfileData = () => {
-        fetch("/profile.json")
+        fetch(`${process.env.PUBLIC_URL}/profile.json`)
           .then(result => {
             if (result.ok) {
               return result.json();

@@ -19,7 +19,7 @@ const greeting = {
   username: "Abhay Bajaj",
   title: "Hi all, I'm Abhay.",
   subTitle: (
-    "A Full Stack Software Developer focused on building modern web, mobile, and AI-powered applications using JavaScript, React, Node.js, Python, and emerging technologies."
+    "A Software Engineer passionate about building useful technology, solving challenging problems, and creating reliable software across a variety of platforms and technologies."
   ),
   resumeLink: "https://docs.google.com/document/d/1drln7fSJH_Mvk-paczpZJ0UsbpzjELMxjuw1eu6TAcY/edit?tab=t.0", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section
@@ -117,9 +117,9 @@ const educationInfo = {
       duration: "August 2024 - August 2026",
       desc: "Advanced computer science studies with an emphasis on software development, systems programming, and applied computing.",
       descBullets: [
-        "Completed coursework in software development, data structures, systems, and web development",
-        "Built experience across full-stack development and systems-level programming",
-        "Strengthened analytical skills through calculus, linear algebra, probability, statistics, and physics"
+        "Completed advanced coursework in software development, data structures, operating systems, databases, and web development.",
+        "Built experience across full-stack development, systems programming, and software engineering through academic projects.",
+        "Strengthened analytical and problem-solving skills through calculus, linear algebra, probability, statistics, and physics."
       ]
     },
     {
@@ -129,9 +129,9 @@ const educationInfo = {
       duration: "August 2021 - May 2024",
       desc: "Built a strong foundation in computer science and mathematics through core programming, theory, and problem-solving coursework.",
       descBullets: [
-        "Completed foundational programming, data structures, and discrete mathematics coursework",
-        "Gained experience with computer architecture, calculus, and linear algebra",
-        "Developed strong logical reasoning, algorithmic thinking, and debugging skills"
+        "Completed foundational coursework in programming, data structures, discrete mathematics, and computer architecture.",
+        "Built a strong foundation in algorithmic thinking, debugging, calculus, and linear algebra.",
+        "Developed problem-solving and logical reasoning skills through programming and mathematics coursework."
       ]
     }
   ]
@@ -165,33 +165,33 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Fellowship Intern",
+      role: "Tech Fellow - TIP102",
+      company: "CodePath",
+      companylogo: require("./assets/images/codepath.webp"),
+      date: "May 2026 – September 2026",
+      descBullets: [
+        "Supported 400+ students in CodePath's Intermediate Technical Interview Prep program through live breakout sessions, debugging, and technical guidance.",
+        "Guided students through data structures, algorithms, and HackerRank coding problems while troubleshooting technical issues and collaborating with instructors and fellow Tech Fellows."
+      ]
+    },
+    {
+      role: "AI Engineering Fellow",
       company: "Handshake AI",
       companylogo: require("./assets/images/HandshakeLogo.jpg"),
       date: "December 2025 – February 2026",
       descBullets: [
-        "Evaluated and improved large language model outputs using structured human feedback and quality rubrics.",
-        "Identified reasoning errors, hallucinations, and edge cases to support iterative model improvement."
+        "Evaluated 500+ large language model outputs using structured rubrics and test cases, identifying hallucinations, reasoning errors, edge cases, and inconsistent behavior across complex evaluation scenarios.",
+        "Documented recurring failure patterns and summarized technical findings to improve evaluation consistency, support model-quality analysis, and inform prompt and test-case refinement."
       ]
     },
     {
-      role: "Individual Contributor",
+      role: "Software Engineer Intern",
       company: "Reality AI Labs",
       companylogo: require("./assets/images/RealityAILogo.jpeg"),
       date: "February 2025 – August 2025",
       descBullets: [
-        "Built full-stack features using React, Node.js, Firebase, and Python to enhance AI-driven applications.",
-        "Developed and integrated LLM workflows using tools like LangChain, OpenAI APIs, and cloud services."
-      ]
-    },
-    {
-      role: "STEM Instructor",
-      company: "RRooar Coding \n& Robotics Academy",
-      companylogo: require("./assets/images/RRooarLogo.jpeg"),
-      date: "May 2024 – August 2024",
-      descBullets: [
-        "Taught coding and robotics fundamentals to students ages 6–12 through hands-on projects.",
-        "Designed interactive lessons to build problem-solving skills and interest in STEM."
+        "Developed and debugged Python backend services, REST APIs, Redis workflows, and cloud-deployed AI integrations, supporting reliable application functionality, data processing, and system communication.",
+        "Built full-stack features using React, Next.js, Node.js, and Firebase while troubleshooting performance issues, integrating AI functionality, and improving application responsiveness and user experience."
       ]
     }
   ]
@@ -201,33 +201,33 @@ const workExperiences = {
 To know how to get github key look at readme.md */
 const openSource = {
   showGithubProfile: "false", // Set true or false to show Contact profile using Github, defaults to true
-  display: false // Set false to hide this section, defaults to true
+  display: true // Set false to hide this section, defaults to true
 };
 
 // Big projects I have worked on
 const bigProjects = {
   title: "Big Projects",
-  subtitle: "SOME PROJECTS I CODED",
+  // subtitle: "SOME PROJECTS I CODED",
   projects: [
     {
       // image: require("./assets/images/"),
-      projectName: "PlanCraft",
-      projectDesc: "Mini Query Engine",
+      projectName: "GatorBazaar",
+      projectDesc: "Full-Stack Marketplace Platform",
       footerLink: [
         {
           name: "View Project",
-          url: "https://github.com/Abhay-Bajaj/PlanCraft"
+          url: "https://github.com/Abhay-Bajaj/GatorBazaar"
         }
       ]
     },
     {
       // image: require("./assets/images/"),
-      projectName: "Finance Tracker",
-      projectDesc: "A full-stack personal finance tracking application",
+      projectName: "Exploding Kittens",
+      projectDesc: "Interactive strategy card game",
       footerLink: [
         {
           name: "View Project",
-          url: "https://github.com/Abhay-Bajaj/FinanceTracker"
+          url: "https://github.com/Abhay-Bajaj/ExplodingKittens"
         }
       ]
     }

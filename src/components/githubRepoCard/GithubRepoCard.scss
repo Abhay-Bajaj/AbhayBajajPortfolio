@@ -10,6 +10,7 @@
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
 .repo-card-div:hover {
   box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
 }
@@ -81,6 +82,7 @@
   background-color: $darkBackground;
   color: $textColorDark;
 }
+
 .dark-card-mode p {
   color: $textColorDark;
 }
@@ -92,4 +94,26 @@
 .dark-card-mode:hover {
   // background-color: $buttonColor !important;
   box-shadow: 0px 0px 16px $darkBoxShadow;
+}
+
+.repo-card-div {
+  border-radius: 10px;
+  border: 1px solid $lightBorder1;
+  box-shadow: 0px 10px 30px -15px $darkBoxShadow;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.repo-card-div:hover {
+  background-color: $skillsColor;
+  color: $darkBackground;
+  box-shadow: 0px 20px 30px -10px $darkBoxShadow;
+}
+
+.repo-card-div:hover p,
+.repo-card-div:hover .repo-stats {
+  color: $darkBackground;
+}
+
+.repo-card-div:hover svg {
+  fill: $darkBackground;
 }

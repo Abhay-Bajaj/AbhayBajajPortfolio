@@ -1,9 +1,9 @@
 import React from "react";
 import "./GithubRepoCard.scss";
-import {Fade} from "react-reveal";
-import {formatFileSizeDisplay} from "../../utils";
+import { Fade } from "react-reveal";
+import { formatFileSizeDisplay } from "../../utils";
 
-export default function GithubRepoCard({repo, isDark}) {
+export default function GithubRepoCard({ repo, isDark }) {
   function openUrlInNewTab(url, name) {
     if (!url) {
       console.log(`URL in ${name} is undefined`);
@@ -44,7 +44,7 @@ export default function GithubRepoCard({repo, isDark}) {
                 <span>
                   <div
                     className="language-color"
-                    style={{backgroundColor: repo.node.primaryLanguage.color}}
+                    style={{ backgroundColor: repo.node.primaryLanguage.color }}
                   ></div>
                   <p>{repo.node.primaryLanguage.name}</p>
                 </span>
@@ -81,8 +81,7 @@ export default function GithubRepoCard({repo, isDark}) {
                     d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"
                   ></path>
                 </svg>
-                <p>{repo.node.stargazers.totalCount}</p>
-              </span>
+                <p>{repo.node.stargazerCount ?? 0}</p>              </span>
             </div>
             <div className="repo-right-stat">
               <p>{formatFileSizeDisplay(repo.node.diskUsage)}</p>
